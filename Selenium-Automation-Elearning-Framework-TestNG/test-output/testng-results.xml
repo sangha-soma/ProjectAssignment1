@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="47674" started-at="2019-09-26T04:20:37Z" finished-at="2019-09-26T04:21:24Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="47674" started-at="2019-09-26T04:20:37Z" finished-at="2019-09-26T04:21:24Z">
+      <class name="com.training.sanity.tests.LoginNAddDeleteCategoryNTag">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="setUpBeforeClass" is-config="true" duration-ms="11385" started-at="2019-09-26T04:20:37Z" finished-at="2019-09-26T04:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="validLoginTest" duration-ms="7350" started-at="2019-09-26T04:20:48Z" finished-at="2019-09-26T04:20:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="SelectDeleteCategory()[pri:1, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="SelectDeleteCategory" duration-ms="14169" started-at="2019-09-26T04:20:55Z" finished-at="2019-09-26T04:21:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectDeleteCategory -->
+        <test-method status="PASS" signature="SelectAddNewTags()[pri:2, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="SelectAddNewTags" duration-ms="5024" started-at="2019-09-26T04:21:10Z" finished-at="2019-09-26T04:21:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectAddNewTags -->
+        <test-method status="PASS" signature="TagDeletion()[pri:3, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="TagDeletion" duration-ms="6846" started-at="2019-09-26T04:21:15Z" finished-at="2019-09-26T04:21:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TagDeletion -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginNAddDeleteCategoryNTag@1e88b3c]" name="tearDown" is-config="true" duration-ms="2849" started-at="2019-09-26T04:21:21Z" finished-at="2019-09-26T04:21:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.LoginNAddDeleteCategoryNTag -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
