@@ -21,7 +21,7 @@ private WebDriver driver;
 	@FindBy(xpath="(//a[text()='Categories'])[1]")
 	private WebElement CategoryLink;
 
-	@FindBy(id="cb-select-849")
+	@FindBy(id="cb-select-820")
 	private WebElement SelectCategory;
 
 	@FindBy(id="bulk-action-selector-top")

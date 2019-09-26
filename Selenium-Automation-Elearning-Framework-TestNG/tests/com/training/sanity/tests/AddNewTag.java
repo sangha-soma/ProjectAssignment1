@@ -9,7 +9,6 @@ import com.training.pom.DeleteCategoryPOM;
 
 public class AddNewTag extends DeleteCategory {
 	
-	private WebDriver driver;
 	private AddNewTagPOM AddNewTag;
 	private ScreenShot screenShot;
   

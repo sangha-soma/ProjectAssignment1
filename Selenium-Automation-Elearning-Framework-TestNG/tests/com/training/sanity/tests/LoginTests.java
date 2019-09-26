@@ -25,14 +25,10 @@ public class LoginTests {
 	private ScreenShot screenShot;
 
 	@BeforeClass
-	public static void setUpBeforeClass() throws IOException {
+	public void setUpBeforeClass() throws IOException {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-	}
-
-	@BeforeMethod
-	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
@@ -40,6 +36,13 @@ public class LoginTests {
 		// open the browser 
 		driver.get(baseUrl);
 	}
+
+	/*
+	 * @BeforeMethod public void setUp() throws Exception { driver =
+	 * DriverFactory.getDriver(DriverNames.CHROME); loginPOM = new LoginPOM(driver);
+	 * baseUrl = properties.getProperty("baseURL"); screenShot = new
+	 * ScreenShot(driver); // open the browser driver.get(baseUrl); }
+	 */
 	
 	/*
 	 * @AfterMethod public void tearDown() throws Exception { Thread.sleep(1000);

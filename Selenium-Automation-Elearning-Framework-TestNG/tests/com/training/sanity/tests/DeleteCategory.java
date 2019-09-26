@@ -10,7 +10,6 @@ import com.training.generics.ScreenShot;
 import com.training.pom.DeleteCategoryPOM;
 
 public class DeleteCategory extends LoginTests{
-	private WebDriver driver;
 	private DeleteCategoryPOM DeleteCategory;
 	private ScreenShot screenShot;
 	
@@ -22,7 +21,7 @@ public class DeleteCategory extends LoginTests{
 	
   @Test(priority=1)
   public void SelectDeleteCategory() throws InterruptedException {
-	  //DeleteCategory = new DeleteCategoryPOM(driver);
+	  DeleteCategory = new DeleteCategoryPOM(driver);
 	  DeleteCategory.ClickPostsLink();
 	  DeleteCategory.ClickCategoryLink();
 	  DeleteCategory.SelectCategoryDelete();
