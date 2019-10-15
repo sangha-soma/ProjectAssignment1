@@ -32,13 +32,13 @@ public class LoginDataProviders {
 	
 	@DataProvider(name = "excel-inputs")
 	public Object[][] getExcelData(){
-		String fileName ="C:/Users/Naveen/Desktop/Testing.xlsx"; 
+		String fileName ="C:\\Users\\sg916t\\Desktop\\Java training\\ManipalProjectTestData.xlsx"; 
 		return new ApachePOIExcelRead().getExcelContent(fileName); 
 	}
 	
 	@DataProvider(name = "xls-inputs")
 	public Object[][] getXLSData(){
 		// ensure you will have the title as first line in the file 
-		return new ReadExcel().getExcelData("C:/Users/Naveen/Desktop/Testing.xls", "Sheet1"); 
+		return new ReadExcel().getExcelData("C:\\Users\\sg916t\\Desktop\\Java training\\Testing.xls", "TestData"); 
 	}
 }

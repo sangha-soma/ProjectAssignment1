@@ -25,13 +25,14 @@ public class ApachePOIExcelRead {
 		
 		try {
 			System.out.println("File Name Got " + fileName);
-			FileInputStream file = new FileInputStream(new File(fileName));
-
+			File sf = new File("C:\\Users\\sg916t\\Desktop\\Java training\\ManipalProjectTestData.xlsx");
+			FileInputStream file = new FileInputStream(sf);
+			//FileInputStream file = new FileInputStream(new File(fileName));
 			// Create Workbook instance holding reference to .xlsx file
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
 			// Get first/desired sheet from the workbook
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			XSSFSheet sheet = workbook.getSheet("TestData");
 			
 			int rowTotal = sheet.getLastRowNum();
 
@@ -89,7 +90,7 @@ public class ApachePOIExcelRead {
 	}
 
 	public static void main(String[] args) {
-		String fileName = "C:/Users/Naveen/Desktop/Testing.xlsx";
+		String fileName = "C:\\Users\\sg916t\\Desktop\\Java training\\ManipalProjectTestData.xlsx";
 		
 		for(String [] temp : new ApachePOIExcelRead().getExcelContent(fileName)){
 			for(String  tt : temp){

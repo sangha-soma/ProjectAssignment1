@@ -12,21 +12,21 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
-import com.training.pom.AddNewTagPOM;
-import com.training.pom.DeleteCategoryPOM;
-import com.training.pom.DeleteTagPOM;
+import com.training.pom.RETC_020_AddNewTagPOM;
+import com.training.pom.RETC_019_DeleteCategoryPOM;
+import com.training.pom.RETC_021_DeleteTagPOM;
 import com.training.pom.LoginPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
-public class LoginNAddDeleteCategoryNTag {
+public class RETC_019_020_021_LoginNAddDeleteCategoryNTag {
 
 	public WebDriver driver;
 	private String baseUrl;
-	private LoginPOM loginPOM;
-	private DeleteCategoryPOM DeleteCategory;
-	private AddNewTagPOM AddNewTag;
-	private DeleteTagPOM DeleteTag;
+	public LoginPOM loginPOM;
+	private RETC_019_DeleteCategoryPOM DeleteCategorytest;
+	private RETC_020_AddNewTagPOM AddNewTagtest;
+	private RETC_021_DeleteTagPOM DeleteTagtest;
 	private static Properties properties;
 	private ScreenShot screenShot;
 
@@ -35,7 +35,7 @@ public class LoginNAddDeleteCategoryNTag {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-		driver = DriverFactory.getDriver(DriverNames.CHROME);
+		driver = DriverFactory.getDriver(DriverNames.FIREFOX);
 		loginPOM = new LoginPOM(driver); 
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
@@ -65,39 +65,39 @@ public class LoginNAddDeleteCategoryNTag {
 
 	@Test(priority=1)
 	public void SelectDeleteCategory() throws InterruptedException {
-		  DeleteCategory = new DeleteCategoryPOM(driver);
-		  DeleteCategory.ClickPostsLink();
-		  DeleteCategory.ClickCategoryLink();
-		  DeleteCategory.SelectCategoryDelete();
+		  DeleteCategorytest = new RETC_019_DeleteCategoryPOM(driver);
+		  DeleteCategorytest.ClickPostsLink();
+		  DeleteCategorytest.ClickCategoryLink();
+		  DeleteCategorytest.SelectCategoryDelete();
 		  Thread.sleep(3000);
-		  DeleteCategory.ClickBulkActionsDrop();
+		  DeleteCategorytest.ClickBulkActionsDrop();
 		  Thread.sleep(3000);
-		  DeleteCategory.ClickApplyButton();
-		  DeleteCategory.GetDelConfMsg();
+		  DeleteCategorytest.ClickApplyButton();
+		  DeleteCategorytest.GetDelConfMsg();
 		  screenShot.captureScreenShot("Second");
 		  }
 	
 	@Test(priority=2)
 	public void SelectAddNewTags() throws InterruptedException {
-		AddNewTag = new AddNewTagPOM(driver);
-		AddNewTag.ClickPostsLink();
-		AddNewTag.ClickTagsLink();
-		AddNewTag.SendNameText();
-		AddNewTag.SendSlugText();
-		AddNewTag.SendDescriptionText();
-		AddNewTag.ClickAddTagButton();
+		AddNewTagtest = new RETC_020_AddNewTagPOM(driver);
+		AddNewTagtest.ClickPostsLink();
+		AddNewTagtest.ClickTagsLink();
+		AddNewTagtest.SendNameText();
+		AddNewTagtest.SendSlugText();
+		AddNewTagtest.SendDescriptionText();
+		AddNewTagtest.ClickAddTagButton();
 		screenShot.captureScreenShot("Third");
 	  }
 	
 	@Test(priority=3)
 	public void TagDeletion() throws InterruptedException {
-		DeleteTag = new DeleteTagPOM(driver);
-		DeleteTag.ClickPostsLink();
-		DeleteTag.ClickTagsLink();
-		DeleteTag.SelectTagDelete();
-		DeleteTag.ClickBulkActionsDrop();
-		DeleteTag.ClickApplyButton();
-		DeleteTag.GetDelConfMsg();
+		DeleteTagtest = new RETC_021_DeleteTagPOM(driver);
+		DeleteTagtest.ClickPostsLink();
+		DeleteTagtest.ClickTagsLink();
+		DeleteTagtest.SelectTagDelete();
+		DeleteTagtest.ClickBulkActionsDrop();
+		DeleteTagtest.ClickApplyButton();
+		DeleteTagtest.GetDelConfMsg();
 		screenShot.captureScreenShot("Fourth");
 		  }
 }

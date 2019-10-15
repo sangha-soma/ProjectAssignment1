@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class DeleteTagPOM {
+public class RETC_021_DeleteTagPOM {
 private WebDriver driver;
 	
-	public DeleteTagPOM(WebDriver driver) {
+	public RETC_021_DeleteTagPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -58,8 +58,9 @@ private WebDriver driver;
 	public void GetDelConfMsg() {
 		String actualmsg= GetDelMsg.getText();
 		System.out.println(actualmsg);
-		String expectedmsg=("Tags deleted." + "\n" + "Dismiss this notice.");
-		Assert.assertEquals(actualmsg,expectedmsg);
+		String expectedmsg=("Tags deleted.");
+		Assert.assertTrue(actualmsg.contains(expectedmsg));
+		//Assert.assertEquals(actualmsg,expectedmsg);
 	}
 
 }

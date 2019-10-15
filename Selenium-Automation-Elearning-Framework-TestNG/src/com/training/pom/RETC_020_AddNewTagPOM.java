@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class AddNewTagPOM {
+public class RETC_020_AddNewTagPOM {
 	private WebDriver driver;
 	
-	public AddNewTagPOM(WebDriver driver) {
+	public RETC_020_AddNewTagPOM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}

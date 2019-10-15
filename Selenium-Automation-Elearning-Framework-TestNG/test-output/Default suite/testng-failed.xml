@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.DeleteCategory">
+      <class name="com.training.sanity.tests.RETC_080_AddProperty">
         <methods>
           <include name="setUpBeforeClass"/>
-          <include name="tearDown"/>
-          <include name="SelectDeleteCategory"/>
-          <include name="setUp"/>
+          <include name="addProperty"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.DeleteCategory -->
+      </class> <!-- com.training.sanity.tests.RETC_080_AddProperty -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
